@@ -27,6 +27,7 @@ void loop() {
   if(value == 0 && last == 1){    //if the light beam is broken, start the following procedure
     if(i == 0){                   //if it is the first measurement
       //time1 = millis();           //start the timer
+      Serial.println("meting gestart");
       time1 = micros();
     }
     
@@ -35,7 +36,10 @@ void loop() {
     if(i==Number_of_periods*2+1){                     //if three breaks (so T), display the time.
       //time2 = millis();
       time2 = micros();
+
+      Serial.println("meting geeindigd, tijd (in microsecondes):");
       Serial.println(time2-time1);//print the time of 1T
+      Serial.println();
       i = 0;                      //reset the counter
     }
   }
