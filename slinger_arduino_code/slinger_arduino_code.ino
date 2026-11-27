@@ -5,6 +5,7 @@ Sensor down: GND | + 5V | sensor pin 8
 */
 
 int Number_of_periods = 10;
+int Lengte_arm = 180;
 int value = 0;
 unsigned long time1;                       //start time
 unsigned long time2;                       //end time
@@ -40,6 +41,7 @@ void loop() {
       Serial.println("meting geeindigd, tijd (in microsecondes):");
       Serial.println(time2-time1);//print the time of 1T
       Serial.println("aantal periodes:");Serial.println(Number_of_periods);
+      Serial.println("lengte van de arm");Serial.println(Lengte_arm);
       Serial.println();
       delay(10000);
       Serial.println("wachttijd voorbij nieuwe meting kan worden begonnnen.");
